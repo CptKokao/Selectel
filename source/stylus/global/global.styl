@@ -1,0 +1,78 @@
+reset()
+*,
+::before,
+::after
+  box-sizing border-box
+
+img
+  width 100%
+  height auto
+
+// html
+//   height 100%
+
+// .header
+//   flex 0 0 auto
+
+// .main
+//   flex 1 0 auto
+
+// .footer
+//   flex 0 0 auto
+
+body
+  // display flex
+  // flex-direction: column
+  // height 100%
+
+  font-family "GothamPro", "Arial", sans-serif
+  font-size 16px
+  color font-color
+
+  margin 0 auto
+
+a
+  text-decoration: none
+
+.btn
+  display inline-block
+  padding 8px 0
+  border-radius: 6px;
+  text-align center
+  color #ffffff
+  font-family: "GothamPro", "Arial", sans-serif
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing 0.5px
+  +sm-block()
+    font-size: 10px;
+    line-height: 24px;
+    padding: 1px 0;
+
+.wrapper
+  wrapper()
+  // outline: 1px solid orange
+
+.wrapper-full
+  wrapper-full()
+  outline: 1px solid pink
+
+.degub-grid
+   debug(rgba(0, 0, 0, 0.5), 1px solid #ff0)
+
+.logo
+  width 112px
+  height 24px
+  +md-block()
+    width 82px
+    height 18px
+  +sm-block()
+    size(2)
+    width 52px
+    height 11px
+
+.loader
+  width 70px
+  margin: 60px auto;
+
+

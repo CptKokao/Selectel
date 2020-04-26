@@ -1,0 +1,101 @@
+.result
+  margin-top 80px
+  +sm-block()
+    margin-top 27px
+  
+  h3
+    font-size 18px
+    line-height 22px
+    +sm-block()
+      font-size 14px
+      line-height 17px
+
+.result__wrap
+  row-flex()
+  margin-top 30px
+  +sm-block()
+    margin-top 20px  
+
+.result__block,
+.result__error
+  col()
+  size(5)
+  display flex
+  min-height: 138px
+  padding 25px 10px 10px
+  margin-bottom 12px
+  border: 1px solid #8391B2
+  border-radius: 7px;
+  font-size: 14px;
+  +sm-block()
+    flex-direction: column
+    min-height 234px
+    padding-top 15px
+    font-size 12px
+
+.result__error
+  color #e84e1b;
+  border: 1px solid #e84e1b;
+
+.result__cpu
+  width 20%
+  span
+    display block
+  p
+    font-weight: bold;
+    margin-bottom: 17px
+  +sm-block()
+    width 100%  
+    span
+      display inline
+
+
+.result__ram
+  width 20%
+  padding-top 35px
+  text-align: center
+  +sm-block()
+    width 100%
+    padding-top 25px
+    text-align: start
+
+.result__hard
+  width 20%
+  padding-top 35px
+  text-align: center
+  +sm-block()
+    width 100%
+    padding-top 25px    
+    text-align: start
+
+.result__gpu
+  width 20%
+  padding-top 35px
+  text-align: center
+  +sm-block()
+    width 100%
+    padding-top 25px    
+    text-align: start
+
+.result__price
+  width 20%
+  padding-top 35px
+  text-align: center
+  p
+    font-weight: bold;
+  +sm-block()
+    width 100%
+    padding-top 25px
+    text-align: start
+
+.result__btn
+  width: 76px;
+  margin-top 12px
+  padding 5px 0
+  color: #2F93FE
+  border: 1px solid #2F93FE
+  font-size: 10px;
+  +sm-block()
+    margin-top 20px
+    padding 0
+    width 105px

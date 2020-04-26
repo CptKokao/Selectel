@@ -1,0 +1,31 @@
+{
+  "name": "pug-template",
+  "version": "1.0.0",
+  "description": "project",
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp start"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "autoprefixer-stylus": "^1.0.0",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "eslint": "4.16.0",
+    "eslint-config-htmlacademy": "0.4.x",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylus": "^2.7.0",
+    "gulp-svgstore": "^7.0.1",
+    "smart-grid": "^2.1.2",
+    "sourcemap": "^0.1.0",
+    "stylus": "^0.54.7"
+  }
+}

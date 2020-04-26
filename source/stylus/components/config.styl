@@ -1,0 +1,100 @@
+.config
+  margin-top -5px
+
+  +md-block()
+    margin-top 30px
+  +sm-block()
+    margin-top 25px
+
+  h2
+    font-size 32px
+    line-height 38px
+    font-weight: bold
+    text-align: center
+    +md-block()
+      font-size 26px
+      line-height 31px    
+    +sm-block()
+      font-size 18px
+      line-height 22px    
+
+
+.config__wrap
+  row-flex()
+  margin-top 50px
+
+  +md-block()
+    margin-top 30px
+  +sm-block()
+    margin-top 15px
+
+.config__range
+  col()
+  size(2)
+  position relative
+  padding-top 15px
+
+  +md-block()
+    size(2.5)
+
+  +sm-block()
+    size(5)
+  
+  input[type="range"]
+    appearance none
+    width 100%
+    &:focus
+      outline none
+
+.config__range-name
+  font-size 18px
+  line-height 22px
+  letter-spacing 0.5px
+
+  +sm-block()
+    font-size 12px
+    line-height 14px
+
+.config__range-wrap
+  width 72%
+  position absolute
+  top: 10px;
+  left: 80px;
+
+  +sm-block()
+    left 68px
+
+.config__range-value
+  position absolute
+  top 30px
+  left 50%
+  transform: translateX(-50%)
+  font-size 12px
+
+.config__range-span
+  display flex
+  justify-content space-between
+  font-size 12px
+  color: #C8C8C8
+
+.config__checkbox
+  col()
+  size(3)
+  padding-top 15px
+
+  +md-block()
+    size(2.5)
+
+  +sm-block()
+    size(5)
+    margin-top 50px
+
+.config__checkbox-wrap
+  display flex
+  justify-content: space-around;
+
+  +sm-block()
+    justify-content flex-start
+
+    label
+      margin-right 20px

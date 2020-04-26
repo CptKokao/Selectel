@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="Тестовое задание")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="shortcut icon" type="image/png" href="./img/favicon.png")
+    link(rel='stylesheet', href='/css/style.css')
+    title Selectel
+
+  body
+    //- подключение svg sprite
+    div(style="display:none")
+      include ./img/sprite_auto.svg
+
+    //- div.degub-grid
+    //-   div
+    //-     div
+    //-       div
+    //-       div
+    //-       div
+    //-       div
+    //-       div
+    
+    header.wrapper
+      div.header
+
+        //- Лого
+        div.header__logo
+          div.logo
+            img(src="./img/logo.svg" alt="Лого")
+
+        //- Навигация
+        div.header__nav
+          nav
+            ul
+              li
+                a(href="https://t.me/Selectel") 
+                  svg(width='22', height='12')
+                    use(xlink:href='#icon-telegram')
+                  span Написать в Telegram 
+            
+              li
+                a(href="mailto:sales@selectel.ru")
+                  svg(width='22', height='12')
+                    use(xlink:href='#icon-mail')
+                  span Написать в почту             
+
+              li
+                a.link(href='tel:78005550675')
+                  svg(width='22', height='12')
+                    use(xlink:href='#icon-phone')
+                  span +7 (800) 555-06-75
+
+    main
+      div.wrapper
+        div.hero
+          div.hero__wrap
+            h1 Надежные серверы для проектов любой сложности
+            p Выделенный сервер — это аренда сервера под задачи вашего проекта с возможностью свободно распоряжаться ресурсами машины и установки любого программного обеспечения.
+            a(class="btn hero__btn") Готовые серверы
+
+          div.hero__img
+            picture
+              //- source(media="(max-width: 767px)" srcset="./img/image-tablet.webp 1x, ./img/image-tablet@2x.webp 2x" type="image/webp")
+              source(media="(max-width: 577px)" srcset="./img/image-tablet.png 1x, ./img/image-tablet@2x.png 2x")
+              //- source(srcset="./img/image.webp 1x, ./img/image@2x.webp 2x" type="image/webp")
+              img(src="./img/image.png" srcset="./img/image@2x.png 2x" width="398" height="240" alt="Надежные серверы")
+      
+      //- Конфигурация
+      div.wrapper
+        div.config
+          h2 Доступные конфигурации
+
+          div.config__wrap
+            //- input[type="range"]
+            div.config__range
+              span.config__range-name vCPU
+              div.config__range-wrap
+                input(type="range" min="2" max="12" step="2" value="6" id="range")
+                span.config__range-value 6 ядер
+                div.config__range-span
+                  span 2
+                  span 12
+
+            div.config__checkbox
+              div.config__checkbox-wrap
+                input(type="checkbox" id="gpu")
+                label(for="gpu") GPU
+
+                input(type="checkbox" id="raid")
+                label(for="raid") RAID
+
+                input(type="checkbox" id="ssd")
+                label(for="ssd") SSD
+
+      //- Результат
+      div.wrapper
+        div.result
+          h3 Performance Line
+          div.loader
+            img(src="./img/icon-loader.svg", width="70" height="70" alt="Прелоадер")
+          div.result__wrap
+
+            
+            //- div.result__block
+            //-   div.result__cpu
+            //-     p D8
+            //-     span 2 × Intel Xeon 
+            //-   div.result__ram
+            //-     p 32 ГБ RAM
+            //-   div.result__hard
+            //-     p 460 ГБ SSD
+            //-   div.result__empty
+            //-   div.result__price
+            //-     p 16 000 ₽/месяц
+            //-     a(class="btn result__btn") Заказать
+
+    footer.footer
+        div.wrapper
+          div.footer__wrap
+            div.footer__logo
+              //- Лого
+              div.logo
+                img(src="./img/logo.svg" alt="Лого")
+              //- Социльные сети
+              div.footer__social
+                ul
+                  li
+                    a.link(href='#')
+                      svg(width='22', height='22')
+                        use(xlink:href='#icon-vk')
+                  li
+                    a.link(href='#')
+                      svg(width='22', height='22')
+                        use(xlink:href='#icon-twitter')
+                  li
+                    a.link(href='#')
+                      svg(width='22', height='22')
+                        use(xlink:href='#icon-facebook')
+                  li
+                    a.link(href='#')
+                      svg(width='22', height='22')
+                        use(xlink:href='#icon-inst')
+            //- Навигация
+            nav.footer__nav
+              ul
+                li
+                  a.link(href='#') Серверы
+                li
+                  a.link(href='#') Оборудование
+                li
+                  a.link(href='#') Дата-центры
+                li
+                  a.link(href='#') Блог
+                li
+                  a.link(href='#') Облако
+                li
+                  a.link(href='#') Решения 
+                li
+                  a.link(href='#') О компании
+                li
+                  a.link(href='#') Офисы
+
+  //- polyfill fetch
+  script(src="https://cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js") 
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.js") 
+  
+  script(src="./js/script.js") 
+
+
+
+

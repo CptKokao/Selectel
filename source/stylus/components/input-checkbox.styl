@@ -1,0 +1,51 @@
+input[type="checkbox"]
+  display none
+
+label
+  position relative
+  padding-left 25px
+  font-weight normal
+  font-size 16px
+  line-height 22px
+  cursor pointer
+
+  +sm-block()
+    font-size 12px
+    line-height 28px
+
+  &::before 
+    position: absolute
+    content ""
+    display inline-block
+    height 18px
+    width 18px
+    border 1px solid #29435D
+    border-radius 50%
+    background transparent
+    top 1px
+    left 0
+
+  &::after
+    position absolute
+    content ""
+    display inline-block
+    height 7px
+    width 8px
+    border-left 2px solid #0971F5
+    border-bottom 2px solid #0971F5
+    transform rotate(-45deg)
+    left: 5px;
+    top: 5px;
+
+/* Прячем галку по умолчанию */
+input[type="checkbox"] + label::after
+    content none
+
+/* Показываем галку по состоянию checked */
+input[type="checkbox"]:checked + label::after
+    content ""
+
+input[type="checkbox"]:checked + label::before
+    border 1px solid #0971F5
+    background transparent
+

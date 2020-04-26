@@ -1,0 +1,56 @@
+.header
+  row-flex()
+  padding-top: 17px;
+  +sm-block()
+    padding-top 6px
+
+.header__logo
+  col()
+  size(1)
+
+.header__nav
+  col()
+  size(4)
+  +md-block()
+    size(1)
+    shift-left(3)
+  +sm-block()
+    size(2)
+    shift-left(2)
+
+  ul
+    display flex
+    flex-wrap: wrap
+    flex-direction row-reverse
+
+    +md-block()
+      justify-content space-between
+  li
+    width 156px
+    margin-left 30px
+    +md-block()
+      width 15px
+      margin-left 0
+
+    a
+      font-size: 12px;
+      line-height: 20px;
+      color: #8391B2;
+
+      span
+        +md-block()
+          display none
+
+      svg
+        width 22px
+        height 12px
+        margin-right 5px
+
+
+
+
+
+
+
+
+  
