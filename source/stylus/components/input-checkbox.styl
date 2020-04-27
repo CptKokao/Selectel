@@ -29,13 +29,18 @@ label
     position absolute
     content ""
     display inline-block
-    height 7px
-    width 8px
-    border-left 2px solid #0971F5
-    border-bottom 2px solid #0971F5
-    transform rotate(-45deg)
-    left: 5px;
-    top: 5px;
+    height 18px
+    width 18px
+    border-radius 50%
+    border 1px solid #29435D
+    background #71B6FF
+    // height 7px
+    // width 8px
+    // border-left 2px solid #0971F5
+    // border-bottom 2px solid #0971F5
+    // transform rotate(-45deg)
+    left: 0;
+    top: 1px;
 
 /* Прячем галку по умолчанию */
 input[type="checkbox"] + label::after
@@ -48,4 +53,12 @@ input[type="checkbox"]:checked + label::after
 input[type="checkbox"]:checked + label::before
     border 1px solid #0971F5
     background transparent
+
+/* Стили по состоянию checked */
+input[type="checkbox"]:disabled + label::before
+    border 1px solid #C8C8C8
+
+input[type="checkbox"]:disabled + label
+    color #C8C8C8
+
 

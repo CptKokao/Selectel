@@ -12,6 +12,9 @@ const svgstore = require('gulp-svgstore');
 const rename = require('gulp-rename');
 const server = require('browser-sync').create();
 const smartgrid = require('smart-grid');
+const webp = require('gulp-webp');
+const imagemin = require("gulp-imagemin");
+const concat = require('gulp-concat');
 
 gulp.task('pug', function () {
   return gulp.src('source/*.+(jade|pug)')
@@ -36,6 +39,7 @@ gulp.task('scripts', function () {
       .pipe(babel({
         presets: ['@babel/env']
       }))
+      .pipe(concat('script.js'))
       .pipe(gulp.dest('build/js/'));
 });
 
@@ -60,6 +64,23 @@ gulp.task('copy', function () {
 
 gulp.task('clean', function () {
   return del('build');
+});
+
+gulp.task('webp', function () {
+  return gulp.src('source/img/**/*.{png,jpg}')
+      .pipe(webp({quality: 90}))
+      .pipe(gulp.dest('build/img'));
+});
+
+gulp.task('images', function () {
+  return gulp.src('source/img/**/*.{png,jpg,svg}')
+      .pipe(imagemin([
+        imagemin.optipng({optimizationLevel: 3}),
+        imagemin.jpegtran({progressive: true}),
+        imagemin.svgo()
+      ]))
+
+      .pipe(gulp.dest('source/img'));
 });
 
 gulp.task('server', function () {
@@ -106,6 +127,7 @@ function grid(done) {
   done();
 }
 
-gulp.task('build', gulp.series('clean', 'copy', 'css','scripts', 'sprite', 'pug'));
+gulp.task('build', gulp.series('clean', 'copy', 'css', 'scripts', 'sprite', 'pug', 'server'));
 gulp.task('start', gulp.series('build', 'server'));
+gulp.task('webp', webp);
 gulp.task('grid', grid);

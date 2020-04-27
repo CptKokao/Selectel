@@ -37,64 +37,49 @@
   color #e84e1b;
   border: 1px solid #e84e1b;
 
-.result__cpu
+.result__item
   width 20%
+  padding-top 35px
+  text-align: center
+  +sm-block()
+    width 100%
+    padding-top 25px
+    text-align: left
+
+.result__item--cpu
+  padding-top 0
+  text-align: left
   span
     display block
   p
     font-weight: bold;
     margin-bottom: 17px
   +sm-block()
-    width 100%  
     span
       display inline
 
-
-.result__ram
-  width 20%
-  padding-top 35px
-  text-align: center
-  +sm-block()
-    width 100%
-    padding-top 25px
-    text-align: start
-
-.result__hard
-  width 20%
-  padding-top 35px
-  text-align: center
-  +sm-block()
-    width 100%
-    padding-top 25px    
-    text-align: start
-
-.result__gpu
-  width 20%
-  padding-top 35px
-  text-align: center
-  +sm-block()
-    width 100%
-    padding-top 25px    
-    text-align: start
-
-.result__price
-  width 20%
-  padding-top 35px
-  text-align: center
+.result__item--price
   p
     font-weight: bold;
-  +sm-block()
-    width 100%
-    padding-top 25px
-    text-align: start
 
 .result__btn
   width: 76px;
   margin-top 12px
   padding 5px 0
   color: #2F93FE
+  background #FFF
   border: 1px solid #2F93FE
   font-size: 10px;
+  outline: none
+  &:hover
+    background #B3D8FF
+    border 1px solid font-color
+    color font-color
+  &:active
+    background #71B6FF
+  &:disabled
+    border 1px solid #C8C8C8
+    color #C8C8C8
   +sm-block()
     margin-top 20px
     padding 0

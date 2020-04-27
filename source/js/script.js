@@ -7,6 +7,7 @@ const raidCheckbox = document.querySelector('#raid');
 const ssdCheckbox = document.querySelector('#ssd');
 const resultWrap = document.querySelector('.result__wrap');
 const loader = document.querySelector('.loader');
+const error = document.querySelector('.error');
 let myData = [];
 
 // получает данные
@@ -20,6 +21,8 @@ function getData() {
           // получаем данные
           return response.json();
         } else {
+          loader.setAttribute('style', 'display: none');
+          error.setAttribute('style', 'display: block');
           throw new Error('Данные не были получены, ошибка: ' + response.status);
         }
       })
@@ -82,22 +85,22 @@ function render(data) {
       const div = document.createElement('div');
       div.className = 'result__block';
       div.innerHTML = `
-        <div class="result__cpu">
+        <div class="result__item result__item--cpu">
           <p>${el.name}</p>
           <span>${el.cpu.name}, ${el.cpu.count * el.cpu.cores} ядер</span>
         </div>
-        <div class="result__ram">
+        <div class="result__item">
           <p>${el.ram}</p>
         </div>
-        <div class="result__hard">
+        <div class="result__item">
           <p>${el.disk.count} x ${el.disk.value} ${el.disk.type}</p>
         </div>
-        <div class="result__gpu">
+        <div class="result__item">
           <p>${el.gpu ? el.gpu : ''}</p>
         </div>
-        <div class="result__price">
-          <p>${el.price} ₽/месяц</p>
-          <a class="btn result__btn">Заказать</a>
+        <div class="result__item result__item--price">
+          <p>${(el.price / 100).toLocaleString()} ₽/месяц</p>
+          <button class="btn result__btn">Заказать</button>
         </div>
         `;
       resultWrap.appendChild(div);
@@ -105,12 +108,18 @@ function render(data) {
   }
 }
 
+// Склонение числительных
+function declOfNum(number, titles) {
+  const cases = [2, 0, 1, 1, 1, 2];
+  return number + ' ' + titles [(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
+}
+
 // изменетя значение input[type="range"]
 function changeValue(e) {
   const target = e.target.value;
   const rangeValue = document.querySelector('.config__range-value');
 
-  rangeValue.innerHTML = `${target} ядер`;
+  rangeValue.innerHTML = declOfNum(Math.floor(target), ['ядро', 'ядра', 'ядер']);
 }
 
 getData().then(data => {
