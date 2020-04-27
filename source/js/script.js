@@ -99,13 +99,18 @@ function render(data) {
           <p>${el.gpu ? el.gpu : ''}</p>
         </div>
         <div class="result__item result__item--price">
-          <p>${(el.price / 100).toLocaleString()} ₽/месяц</p>
+          <p>${numberWithCommas(el.price / 100)} ₽/месяц</p>
           <button class="btn result__btn">Заказать</button>
         </div>
         `;
       resultWrap.appendChild(div);
     });
   }
+}
+
+// Получает число с разделителем
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 }
 
 // Склонение числительных

@@ -30,7 +30,7 @@ html(lang="ru")
         //- Лого
         div.header__logo
           div.logo
-            a(href="https://selectel.ru/" target="_blank")
+            a(href="https://selectel.ru/" rel="noopener" target="_blank")
               img(src="./img/logo.svg" alt="Лого")
 
         //- Навигация
@@ -38,19 +38,19 @@ html(lang="ru")
           nav
             ul
               li
-                a(href="https://t.me/Selectel" target="_blank" ) 
+                a(href="https://t.me/Selectel" rel="noopener" target="_blank" ) 
                   svg(width='22', height='12')
                     use(xlink:href='#icon-telegram')
                   span Написать в Telegram 
             
               li
-                a(href="mailto:sales@selectel.ru" target="_blank")
+                a(href="mailto:sales@selectel.ru" rel="noopener" target="_blank")
                   svg(width='22', height='12')
                     use(xlink:href='#icon-mail')
                   span Написать в почту             
 
               li
-                a.link(href='tel:78005550675' target="_blank")
+                a(href='tel:78005550675' rel="noopener" target="_blank")
                   svg(width='22', height='12')
                     use(xlink:href='#icon-phone')
                   span +7 (800) 555-06-75
@@ -61,7 +61,7 @@ html(lang="ru")
           div.hero__wrap
             h1 Надежные серверы для проектов любой сложности
             p Выделенный сервер — это аренда сервера под задачи вашего проекта с возможностью свободно распоряжаться ресурсами машины и установки любого программного обеспечения.
-            a(class="btn hero__btn" href="https://selectel.ru/" target="_blank") Готовые серверы
+            a(class="btn hero__btn" href="https://selectel.ru/" rel="noopener" target="_blank") Готовые серверы
 
           div.hero__img
             picture
@@ -81,6 +81,7 @@ html(lang="ru")
               span.config__range-name vCPU
               div.config__range-wrap
                 input(type="range" min="2" max="12" step="2" value="6" id="range")
+                label(class="hidden" for="range") Вябор количество ядер
                 span.config__range-value 6 ядер
                 div.config__range-span
                   span 2
@@ -116,29 +117,29 @@ html(lang="ru")
           div.footer__wrap
             div.footer__logo
               //- Лого
-              a(href="https://selectel.ru/" target="_blank")
+              a(href="https://selectel.ru/" rel="noopener" target="_blank")
                 div.logo
                   img(src="./img/logo.svg" alt="Лого")
               //- Социльные сети
               div.footer__social
                 ul
                   li
-                    a.link(href='https://vk.com/selectel' target="_blank")
+                    a.link(href='https://vk.com/selectel' rel="noopener" target="_blank")
                       span.hidden Вконтакте
                       svg(width='22', height='22')
                         use(xlink:href='#icon-vk')
                   li
-                    a.link(href='https://twitter.com/selectel' title="Твиттер" target="_blank")
+                    a.link(href='https://twitter.com/selectel' title="Твиттер" rel="noopener" target="_blank")
                       span.hidden Вконтакте
                       svg(width='22', height='22')
                         use(xlink:href='#icon-twitter')
                   li
-                    a.link(href='https://www.facebook.com/selectel/' target="_blank")
+                    a.link(href='https://www.facebook.com/selectel/' rel="noopener" target="_blank")
                       span.hidden Фейсбук
                       svg(width='22', height='22')
                         use(xlink:href='#icon-facebook')
                   li
-                    a.link(href='https://www.instagram.com/selectel.ru/' target="_blank")
+                    a.link(href='https://www.instagram.com/selectel.ru/' rel="noopener" target="_blank")
                       span.hidden Инстаграм
                       svg(width='22', height='22')
                         use(xlink:href='#icon-inst')
@@ -146,21 +147,21 @@ html(lang="ru")
             nav.footer__nav
               ul
                 li
-                  a.link(href='https://selectel.ru/' target="_blank") Серверы
+                  a.link(href='https://selectel.ru/' rel="noopener" target="_blank") Серверы
                 li
-                  a.link(href='https://selectel.ru/' target="_blank") Оборудование
+                  a.link(href='https://selectel.ru/' rel="noopener" target="_blank") Оборудование
                 li
-                  a.link(href='https://selectel.ru/' target="_blank") Дата-центры
+                  a.link(href='https://selectel.ru/' rel="noopener" target="_blank") Дата-центры
                 li
-                  a.link(href='https://selectel.ru/' target="_blank") Блог
+                  a.link(href='https://selectel.ru/' rel="noopener" target="_blank") Блог
                 li
-                  a.link(href='https://selectel.ru/' target="_blank") Облако
+                  a.link(href='https://selectel.ru/' rel="noopener" target="_blank") Облако
                 li
-                  a.link(href='https://selectel.ru/' target="_blank") Решения 
+                  a.link(href='https://selectel.ru/' rel="noopener" target="_blank") Решения 
                 li
-                  a.link(href='https://selectel.ru/' target="_blank") О компании
+                  a.link(href='https://selectel.ru/' rel="noopener" target="_blank") О компании
                 li
-                  a.link(href='https://selectel.ru/' target="_blank") Офисы
+                  a.link(href='https://selectel.ru/' rel="noopener" target="_blank") Офисы
 
   script(src="./js/script.js") 
 
